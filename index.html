@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta charset="utf-8">
+        <style>
+            label{
+                display: block;
+            }
+        </style>
+    </head>
+    <body style="background-color:lightgreen;">
+        <h1 class="header">Area and Perimeter Calcutalor for a Circle</h1>
+        <h2 id="area"></h2>
+        <h2 id="perimeter"></h2>
+        <label for="radius" class="Diameter">Diameter:
+            <input type="text" id="radius">
+        </label>
+        <button id="calcBtn">Calculate</button>
+        
+        <script>
+          var radEl=document.querySelector("#radius");
+            
+            var calcBtn=document.querySelector("#calcBtn");
+            
+            var areagEl=document.querySelector("#area");
+            var perimeterEl=document.querySelector("#perimeter");
+            
+            
+            calcBtn.onclick=function(){
+                
+              
+                area=Number(radEl.value)*Number(radEl.value)*Math.PI;
+                
+               
+                perimeter=2*Number(radEl.value)*Math.PI;
+ 
+                
+                
+                areagEl.innerHTML="Area of a Circle:"+Math.round(area);
+                perimeterEl.innerHTML="Perimiter of a Circle:"+Math.round(perimeter);
+            } 
+        </script>
+        <br>
+        <center>
+         <img class="image" src="circleeee.png"/>
+        </center>
+    </body>
+</html>
